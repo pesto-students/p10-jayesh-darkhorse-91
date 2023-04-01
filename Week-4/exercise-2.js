@@ -30,7 +30,9 @@ him.teach("Inheritance");
 
 
 //! Implementing using ES6 Classes
+//! Please uncomment below code and comment above code to run class implementation
 
+/*
 class Person {
     constructor(name, age) {
         this.name = name;
@@ -53,3 +55,4 @@ class Teacher extends Person {
 var him = new Teacher("Adam", 45);
 // him.initialize("Adam",45);
 him.teach("Inheritance");
+*/
