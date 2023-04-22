@@ -1,3 +1,5 @@
+// Symbols
+
 const fib = (n) => ({
     [Symbol.iterator]: () => {
         let i = 0;
