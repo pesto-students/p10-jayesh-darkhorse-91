@@ -1,5 +1,6 @@
 // Sort array of 0's,1's and 2's
 
+// My Approach
 
 const zerOneTwo = (arr) => {
     let zero = 0;
@@ -35,11 +36,41 @@ const zerOneTwo = (arr) => {
 }
 
 
+//Dutch National Flag Algorithm
+
+const zerOneTwoAlgo = (arr) => {
+    let low = 0;
+    let mid = 0;
+    let high = arr.length-1;
+
+    while (mid <= high) {
+        if(arr[mid] === 0){
+            [arr[mid], arr[low]] = [arr[low], arr[mid]];
+            mid++;
+            low++;
+        }
+        else if(arr[mid] === 1) {
+            mid++;
+        }
+        else {
+            [arr[mid], arr[high]] = [arr[high], arr[mid]];
+            mid++;
+            high--;
+        }
+    }
+}
 
 
 // Driver Code
-
-arr = [0, 2, 1, 2, 0]
-console.log('Unsorted --',arr)
-zerOneTwo(arr)
-console.log('Sorted --',arr)
+console.log('My Approach ')
+arr1 = [0, 2, 1, 2, 0]
+console.log('Unsorted --',arr1)
+zerOneTwo(arr1)
+console.log('Sorted --',arr1)
+console.log()
+console.log()
+console.log('Dutch National Flag Algorithm')
+arr2 = [0, 2, 1, 2, 0]
+console.log('Unsorted --',arr2)
+zerOneTwoAlgo(arr2)
+console.log('Sorted --',arr2)
