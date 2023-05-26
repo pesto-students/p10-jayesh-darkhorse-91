@@ -54,7 +54,6 @@ const zerOneTwoAlgo = (arr) => {
         }
         else {
             [arr[mid], arr[high]] = [arr[high], arr[mid]];
-            mid++;
             high--;
         }
     }
